@@ -34,7 +34,7 @@
 ### Clone or download this repository
 
 ```sh
-git clone https://github.com/sumitkr003yelpcamp.git
+git clone https://github.com/sumitkr003/yelpcamp.git
 ```
 
 ### Install dependencies
