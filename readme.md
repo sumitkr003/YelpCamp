@@ -1,145 +1,68 @@
-# YelpCamp Development Process
-A full-stack Node.js project from my web dev course with RESTful routing
+# YelpCamp
 
-![home-page](home.png)
 
-## Initial Setup
-* Add Landing Page
-* Add Campgrounds Page that lists all campgrounds
+## Features
 
-Each Campground has:
-   * Name
-   * Image
+* Authentication:
+  
+  * User login with username and password
 
-## Layout and Basic Styling
-* Create header and footer partials
-* Add in Bootstrap
+  * Admin sign-up with admin code
 
-## Creating New Campgrounds
-* Setup new campground POST route
-* Add in body-parser
-* Setup route to show form
-* Add basic unstyled form
+* Authorization:
 
-## Style the campgrounds page
-* Add a better header/title
-* Make campgrounds display in a grid
+  * One cannot manage posts and view user profile without being authenticated
 
-## Style the Navbar and Form
-* Add a navbar to all templates
-* Style the new campground form
+  * One cannot edit or delete posts and comments created by other users
 
-## Add Mongoose
-* Install and configure Mongoose
-* Setup campground model
-* Use campground model inside of routes
+  * Admin can manage all posts and comments
 
-## Show Page
-* Review the RESTful routes we've seen so far
-* Add description to the campground model
-* Show db.collection.drop()
-* Add a show route/template
+* Manage campground posts with basic functionalities:
 
-## Refactor Mongoose Code
-* Create a models directory
-* Use module.exports
-* Require everything correctly!
+  * Create, edit and delete posts and comments
 
-## Add Seeds File
-* Add a seeds.js file
-* Run the seeds file every time the server starts
+  * Upload campground photos
 
-## Add the Comment model!
-* Make comment errors go away!
-* Display comments on campground show page
+* Flash messages responding to users' interaction with the app
 
-## Comment New/Create
-* Discuss nested routes
-* Add the comment new and create routes
-* Add the new comment form
+* Responsive web design
+ 
+## Getting Started
 
-## Style Show Page
-* Add sidebar to show page
-* Display comments nicely
+> This app contains API secrets and passwords that have been hidden deliberately, so the app cannot be run with its features on your local machine. However, feel free to clone this repository if necessary.
 
-## Finish Styling Show Page
-* Add public directory
-* Add custom stylesheet
+### Clone or download this repository
 
-## Authentication Pt. 1 - Add User Model
-* Install all packages needed for auth
-* Define User model 
+```sh
+git clone https://github.com/lucasweng/yelp-camp.git
+```
 
-## Authentication Pt. 2 - Register
-* Configure Passport
-* Add register routes
-* Add register template
+### Install dependencies
 
-## Authentication Pt. 3 - Login
-* Add login routes
-* Add login template
+```sh
+npm install
+```
 
-## Authentication Pt. 4 - Logout/Navbar
-* Add logout route
-* Prevent user from adding a comment if not signed in
-* Add links to navbar
+or
 
-## Authentication Pt. 5 - Show/Hide Links
-* Show/hide auth links in navbar 
+```sh
+yarn install
+```
 
-## Refactor The Routes
-* Use Express router to reoragnize all routes
+## Built with
 
-## Users + Comments
-* Associate users and comments
-* Save author's name to a comment automatically
+### Front-end
 
-## Users + Campgrounds
-* Prevent an unauthenticated user from creating a campground
-* Save username+id to newly created campground
+* [ejs](http://ejs.co/)
+* [Bootstrap](https://getbootstrap.com/docs/3.3/)
 
-## Editing Campgrounds
-* Add Method-Override
-* Add Edit Route for Campgrounds
-* Add Link to Edit Page
-* Add Update Route
+### Back-end
 
-## Deleting Campgrounds
-* Add Destroy Route
-* Add Delete button
-
-## Authorization Part 1: Campgrounds
-* User can only edit his/her campgrounds
-* User can only delete his/her campgrounds
-* Hide/Show edit and delete buttons
-
-## Editing Comments
-* Add Edit route for comments
-* Add Edit button
-* Add Update route
-
-Campground Edit Route: /campgrounds/:id/edit
-Comment Edit Route:    /campgrounds/:id/comments/:comment_id/edit
-
-## Deleting Comments
-* Add Destroy route
-* Add Delete button
-
-Campground Destroy Route: /campgrounds/:id
-Comment Destroy Route:    /campgrounds/:id/comments/:comment_id
-
-## Authorization Part 2: Comments
-* User can only edit his/her comments
-* User can only delete his/her comments
-* Hide/Show edit and delete buttons
-* Refactor Middleware to a single file
-
-## Adding in Flash!
-* Demo working version
-* Install and configure connect-flash
-* Add bootstrap alerts to header
-
-## Adding dynamic price tag
-* Show user-defined price
-* Edit new or old price
-* Change model for campground
+* [express](https://expressjs.com/)
+* [mongoDB](https://www.mongodb.com/)
+* [mongoose](http://mongoosejs.com/)
+* [passport](http://www.passportjs.org/)
+* [passport-local](https://github.com/jaredhanson/passport-local#passport-local)
+* [express-session](https://github.com/expressjs/session#express-session)
+* [method-override](https://github.com/expressjs/method-override#method-override)
+* [connect-flash](https://github.com/jaredhanson/connect-flash#connect-flash)
